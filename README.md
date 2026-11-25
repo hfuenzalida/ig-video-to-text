@@ -1,6 +1,10 @@
 # IG Video to Text
 
-**Privacy-first video understanding**: upload a local file (or optional URL import), extract audio with **ffmpeg**, transcribe with **faster-whisper** on your hardware, optionally OCR on-screen text with **Tesseract**, and optionally structure content with any **OpenAI-compatible** LLM—no mandatory cloud transcription API.
+## Business case
+
+Short-form and social video is now a primary format for **training, marketing, and field knowledge**, but the information inside it is **not searchable, quotable, or integrable** with downstream workflows (briefs, CRM notes, research libraries). Teams either manually re-watch content or send sensitive media to third-party transcription APIs with unclear data handling.
+
+This project addresses that gap with a **sovereign-by-default pipeline**: extract speech and on-screen text on infrastructure you control, optionally structure it into summaries and entities, and persist results in a **local searchable library**. File upload is the recommended path because platform URL scraping is fragile and often conflicts with terms of service. **Intent:** prove **multimodal ingestion without mandatory cloud STT**—a building block for creators, analysts, and compliance-minded orgs evaluating local ML stacks.
 
 **Stack:** FastAPI · React (Vite) · faster-whisper · SQLite library · FTS search  
 **License:** [MIT](LICENSE)  

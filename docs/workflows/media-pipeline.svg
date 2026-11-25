@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 340" role="img" aria-label="Video to text pipeline">
+  <defs>
+    <marker id="mv" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#334155"/>
+    </marker>
+    <style>
+      .b { fill: #fff; stroke: #64748b; }
+      .opt { fill: #faf5ff; stroke: #7c3aed; stroke-dasharray: 4 3; }
+      .t { font: 600 14px system-ui,sans-serif; fill: #0f172a; }
+      .l { font: 12px system-ui,sans-serif; fill: #334155; }
+    </style>
+  </defs>
+  <rect width="860" height="340" fill="#f8fafc"/>
+  <text x="430" y="28" text-anchor="middle" class="t">Local media ingestion pipeline</text>
+  <rect x="30" y="55" width="120" height="50" rx="8" class="b"/>
+  <text x="90" y="78" text-anchor="middle" class="l">Upload / URL</text>
+  <text x="90" y="95" text-anchor="middle" class="l">FastAPI</text>
+  <line x1="150" y1="80" x2="185" y2="80" stroke="#334155" marker-end="url(#mv)"/>
+  <rect x="185" y="55" width="110" height="50" rx="8" class="b"/>
+  <text x="240" y="85" text-anchor="middle" class="l">ffmpeg audio</text>
+  <line x1="295" y1="80" x2="330" y2="80" stroke="#334155" marker-end="url(#mv)"/>
+  <rect x="330" y="55" width="140" height="50" rx="8" fill="#ecfdf5" stroke="#059669"/>
+  <text x="400" y="78" text-anchor="middle" class="l">faster-whisper</text>
+  <text x="400" y="95" text-anchor="middle" class="l">transcript segments</text>
+  <line x1="470" y1="80" x2="505" y2="80" stroke="#334155" marker-end="url(#mv)"/>
+  <rect x="505" y="55" width="130" height="50" rx="8" class="opt"/>
+  <text x="570" y="78" text-anchor="middle" class="l">Frame OCR</text>
+  <text x="570" y="95" text-anchor="middle" class="l">Tesseract</text>
+  <line x1="635" y1="80" x2="670" y2="80" stroke="#334155" marker-end="url(#mv)"/>
+  <rect x="670" y="55" width="160" height="50" rx="8" class="opt"/>
+  <text x="750" y="78" text-anchor="middle" class="l">LLM extraction</text>
+  <text x="750" y="95" text-anchor="middle" class="l">summary · entities</text>
+  <line x1="400" y1="105" x2="400" y2="145" stroke="#334155" marker-end="url(#mv)"/>
+  <rect x="300" y="145" width="260" height="48" rx="8" class="b"/>
+  <text x="430" y="175" text-anchor="middle" class="l">JSON / TXT download · React UI</text>
+  <rect x="120" y="220" width="620" height="95" rx="8" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="430" y="248" text-anchor="middle" class="l">Phase 4 — SQLite library + FTS search (IG_VTT_DB_PATH)</text>
+  <text x="430" y="270" text-anchor="middle" class="l">Phase 5 — optional yt-dlp URL import (disabled unless IG_VTT_URL_IMPORT=1)</text>
+  <text x="430" y="292" text-anchor="middle" class="l">No cloud transcription required; LLM phase uses any OpenAI-compatible endpoint</text>
+</svg>
